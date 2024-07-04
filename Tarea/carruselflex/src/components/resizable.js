@@ -10,10 +10,11 @@ function Resizable() {
 
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 2,
-    slidesToScroll: 1.5
+    slidesToScroll: 1.5,
+    centerMode:true
   };
   const images = [
     "https://i.pinimg.com/564x/17/34/fb/1734fbd295732e042e90f47cbfbab554.jpg",
@@ -25,7 +26,7 @@ function Resizable() {
 
 ];
   return (
-    <div className="slider-container">
+    <div className="carousel-container">
       <h2> Resizable Collapsible </h2>
       <button className="button" onClick={() => setWidth(width + 100)}>
         {""}
@@ -42,14 +43,17 @@ function Resizable() {
       {display &&(
       <div className="div-stylo" style={{ width: `${width}px` }}>      
       
+        
         <Slider {...settings}>
         {images.map((image,index)=>(
-                    <div key={index}>
+                    <div key={index} className="fit">
                         <img src={image} alt={`Slide ${index}`}style={{ width: '100%' }}/>
                     </div>
-                ))}
+                ))} 
+          </Slider>
+       
          
-        </Slider>
+        
       </div>
       )}
     </div>

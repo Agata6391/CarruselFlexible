@@ -1,12 +1,16 @@
-.slider-container {
+.carousel-container {
   text-align: center;
   margin: 20px;
+ 
+}
+.carousel-container img {
+    width: auto;
+    height: 450px;
+    object-fit: cover;
+    min-height: 100%;
+
 }
 
-.slider-container img {
-  width: 450px;
-  height: 450px;
-}
 
 .div-stylo {
   overflow: hidden;
@@ -14,18 +18,5 @@
   margin: 0 auto;
 }
 
-.slick-dots {
-    bottom: -30px; /* Ajusta según sea necesario */
-}
-  
-.slick-dots li button:before {
-    font-size: 12px;
-    color: black; /* Cambia el color según tu preferencia */
- }
 
-body {
-    background-color: rgb(23, 247, 247);
-}
-button{
-    background-color: rgb(50, 231, 26);
-}
+
